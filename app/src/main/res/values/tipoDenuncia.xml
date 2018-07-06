@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string-array name="tipoDenuncia">
+        <item>Perdida de documentos</item>
+        <item>Sustraccion de documentos</item>
+        <item>Recuperacion de documentos</item>
+        <item>Sustraccion de vehiculo</item>
+        <item>Recuperacion de vehiculo</item>
+        <item>Sustraccion en domicilio</item>
+    </string-array>
+
+    <string-array name="agentes">
+        <item>agente 0</item>
+        <item>agente 1</item>
+        <item>agente 2</item>
+        <item>agente 3</item>
+        <item>agente 4</item>
+        <item>agente 5</item>
+    </string-array>
+
+</resources>

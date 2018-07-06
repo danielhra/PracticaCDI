@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FormularioMulta">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <EditText
+            android:id="@+id/textView21"
+            android:layout_width="177dp"
+            android:layout_height="wrap_content"
+            android:hint="Fecha y Hora"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintBottom_toTopOf="@+id/textView19"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+        <EditText
+            android:id="@+id/textView20"
+            android:layout_width="177dp"
+            android:layout_height="wrap_content"
+            android:hint="Lugar de infracción"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintBottom_toTopOf="@+id/textView21"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+        <EditText
+            android:id="@+id/editText8"
+            android:layout_width="345dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="41dp"
+            android:ems="10"
+            android:hint="Descripción"
+            android:inputType="textMultiLine"
+            android:selectAllOnFocus="true"
+            android:singleLine="false"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintBottom_toTopOf="@+id/imageButton16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+        <EditText
+            android:id="@+id/textView15"
+            android:layout_width="177dp"
+            android:layout_height="wrap_content"
+            android:hint="Vehiculo"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintBottom_toTopOf="@+id/textView18"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
+        <EditText
+            android:id="@+id/textView18"
+            android:layout_width="177dp"
+            android:layout_height="wrap_content"
+            android:hint="Perdida de Puntos"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintBottom_toTopOf="@+id/textView10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+        <EditText
+            android:id="@+id/textView10"
+            android:layout_width="177dp"
+            android:layout_height="wrap_content"
+            android:hint="Expediente"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintBottom_toTopOf="@+id/textView20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+        <EditText
+            android:id="@+id/textView19"
+            android:layout_width="177dp"
+            android:layout_height="wrap_content"
+            android:hint="Importe"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintBottom_toTopOf="@+id/textView23"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView21" />
+
+        <EditText
+            android:id="@+id/textView23"
+            android:layout_width="177dp"
+            android:layout_height="wrap_content"
+            android:hint="Importe Reducido"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintBottom_toTopOf="@+id/editText8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+        <EditText
+            android:id="@+id/textView25"
+            android:layout_width="177dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:hint="Nombre y Apellidos"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintBottom_toTopOf="@+id/textView15"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imageButton16"
+            android:layout_width="97dp"
+            android:layout_height="93dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginEnd="55dp"
+            android:layout_marginLeft="84dp"
+            android:layout_marginRight="55dp"
+            android:layout_marginStart="84dp"
+            android:layout_marginTop="41dp"
+            android:background="?attr/colorBackgroundFloating"
+            android:onClick="onToast_Mensaje"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageButton19"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText8"
+            app:srcCompat="@drawable/save" />
+
+        <ImageButton
+            android:id="@+id/imageButton19"
+            android:layout_width="89dp"
+            android:layout_height="90dp"
+            android:layout_marginEnd="114dp"
+            android:layout_marginRight="114dp"
+            android:layout_marginTop="48dp"
+            android:background="?attr/colorBackgroundFloating"
+            android:onClick="irFormularioMultas"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageButton16"
+            app:layout_constraintTop_toBottomOf="@+id/editText8"
+            app:srcCompat="@drawable/enviar3" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</ScrollView>

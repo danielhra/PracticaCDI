@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.julian.cdi">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="     CDI"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MenuPolicia"
+            android:label="Menú policia" />
+        <activity
+            android:name=".BuscarPredenuncia"
+            android:label="Buscar predenuncia"
+            android:parentActivityName=".MenuPolicia">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MenuPolicia" />
+        </activity>
+        <activity
+            android:name=".FormularioDenuncia"
+            android:label="Formulario Denuncia"
+            android:parentActivityName=".BuscarPredenuncia">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".BuscarPredenuncia" />
+        </activity>
+        <activity
+            android:name=".MenuSanciones"
+            android:label="Menú Sanciones"
+            android:parentActivityName=".MenuPolicia">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MenuPolicia" />
+        </activity>
+        <activity
+            android:name=".FormularioAtestado"
+            android:label="Formulario Atestado"
+            android:parentActivityName=".MenuSanciones">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MenuSanciones" />
+        </activity>
+        <activity
+            android:name=".MenuMultas"
+            android:label="Menú Multas"
+            android:parentActivityName=".MenuSanciones">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MenuSanciones" />
+        </activity>
+        <activity
+            android:name=".FormularioMulta"
+            android:label="Formulario Multa"
+            android:parentActivityName=".MenuMultas">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MenuMultas" />
+        </activity>
+        <!-- APLICACION CIVIL -->
+        <activity
+            android:name=".MenuCivil"
+            android:label="Menú Civil" />
+        <activity
+            android:name=".FormularioPredenuncia"
+            android:label="Formulario Predenuncia"
+            android:parentActivityName=".MenuCivil">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MenuCivil" />
+        </activity>
+        <activity
+            android:name=".AvisoSocorro"
+            android:label="Aviso Socorro"
+            android:parentActivityName=".MenuCivil">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MenuCivil" />
+        </activity>
+        <activity
+            android:name=".ListadoDenuncias"
+            android:label="Listado Denuncias"
+            android:parentActivityName=".MenuCivil">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MenuCivil" />
+        </activity>
+        <activity
+            android:name=".MenuGestionDenuncias"
+            android:label="Gestion Denuncias"
+            android:parentActivityName=".MenuCivil">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MenuCivil" />
+        </activity>
+        <activity
+            android:name=".ListadoDenunciasEmitidas"
+            android:label="Denuncias Emitidas"
+            android:parentActivityName=".MenuCivil">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MenuGestionDenuncias" />
+        </activity>
+        <activity
+            android:name=".ListadoDenunciasRecibidas"
+            android:label="Denuncias Recibidas"
+            android:parentActivityName=".MenuCivil">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MenuGestionDenuncias" />
+        </activity>
+        <activity
+            android:name=".MostrarDenuncia"
+            android:label="Denuncia"
+            android:parentActivityName=".ListadoDenuncias">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ListadoDenuncias" />
+        </activity>
+        <activity
+            android:name=".modelo_multa_orden_publico"
+            android:label="Orden Público"
+            android:parentActivityName=".MenuMultas">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MenuMultas" />
+        </activity>
+        <activity
+            android:name=".AvisoEnviado"
+            android:label="Aviso Enviado" />
+        <activity android:name=".BaseActivity" />
+        <activity
+            android:name=".MenuJefatura"
+            android:label="Menu Jefatura" />
+        <activity
+            android:name=".GestionDenuncias"
+            android:label="Gestion Denuncias"
+            android:parentActivityName=".MenuMultas">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MenuJefatura" />
+        </activity>
+        <activity
+            android:name=".DenunciaPendiente"
+            android:label="Orden Público"
+            android:parentActivityName=".MenuMultas">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MenuMultas" />
+        </activity>
+        <activity
+            android:name=".NuevoEvento"
+            android:label="Nuevo Evento"
+            android:parentActivityName=".ListadoEventos">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ListadoEventos" />
+        </activity>
+        <activity
+            android:name=".ListadoEventos"
+            android:label="Eventos"
+            android:parentActivityName=".MenuJefatura">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MenuJefatura" />
+        </activity>
+        <activity
+            android:name=".MostrarEvento"
+            android:label="Evento"
+            android:parentActivityName=".ListadoEventos">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MenuMultas" />
+        </activity>
+        <activity android:name=".AvisoNotificacion" />
+        <activity
+            android:name=".PriorizadoEmergencia"
+            android:label="Priorizacion Emergencia" />
+        <activity
+            android:name=".AvisoPriorizado"
+            android:label=" Aviso Enviado" />
+        <activity
+            android:name=".ListadoEmergencia"
+            android:label="Emergencias"
+            android:parentActivityName=".MenuJefatura">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MenuJefatura" />
+        </activity>
+        <activity android:name=".TodosEventosPolicia"
+            android:label="Eventos"
+            android:parentActivityName=".EventosPolicia">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".EventosPolicia" />
+        </activity>
+        <activity android:name=".MostrarEventoPolicia"
+            android:label="Evento"
+            android:parentActivityName=".TodosEventosPolicia">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".TodosEventosPolicia" />
+        </activity>
+        <activity android:name=".EventosPolicia"
+            android:label="Menu de eventos"
+            android:parentActivityName=".MenuPolicia">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MenuPolicia" />
+        </activity>
+        <activity android:name=".AsignadosEventosPolicia"
+            android:label="Eventos asignados"
+            android:parentActivityName=".EventosPolicia">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".EventosPolicia" />
+        </activity>
+        <activity android:name=".MostrarEventoAsignado"
+            android:label="Evento asignado"/>
+        <activity android:name=".AvisoAsistencia"
+            android:label="Aviso Asistencia"/>
+        <activity android:name=".AvisoCreacionPreDenuncia"
+            android:label="Aviso creación predenuncia"/>
+    </application>
+
+</manifest>

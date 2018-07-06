@@ -1,0 +1,100 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MostrarEventoAsignado">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp">
+
+            <EditText
+                android:id="@+id/nombreEventoMP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="none"
+                android:editable="false"
+                android:hint="nombre"
+
+                android:singleLine="true" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp">
+
+            <EditText
+                android:id="@+id/fechaEventoMP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:ems="10"
+                android:inputType="none"
+                android:hint="fecha"
+                android:singleLine="true" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp">
+
+            <EditText
+                android:id="@+id/ubicacionEventoMP"
+                android:editable="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="none"
+                android:hint="ubicacion"
+                android:singleLine="false"/>
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:editable="false"
+                android:layout_height="wrap_content"
+                android:id="@+id/descripcionEventoMP"
+                android:ems="10"
+                android:inputType="textMultiLine"
+                android:hint="descripcion"
+                android:singleLine="true" />
+        </android.support.design.widget.TextInputLayout>
+
+        <ImageButton
+            android:layout_marginTop="50dp"
+            android:layout_width="wrap_content"
+            android:onClick="irAvisoAsistencia"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_hecho"
+            android:background="@null"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="irAvisoAsistencia"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:text="confirmar asistencia"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
