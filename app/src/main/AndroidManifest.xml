@@ -143,7 +143,7 @@
             android:name=".MenuJefatura"
             android:label="Menu Jefatura" />
         <activity
-            android:name=".GestionDenuncias"
+            android:name=".AsignarPredenuncia"
             android:label="Gestion Denuncias"
             android:parentActivityName=".MenuMultas">
             <meta-data
@@ -197,40 +197,48 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MenuJefatura" />
         </activity>
-        <activity android:name=".TodosEventosPolicia"
+        <activity
+            android:name=".TodosEventosPolicia"
             android:label="Eventos"
             android:parentActivityName=".EventosPolicia">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".EventosPolicia" />
         </activity>
-        <activity android:name=".MostrarEventoPolicia"
+        <activity
+            android:name=".MostrarEventoPolicia"
             android:label="Evento"
             android:parentActivityName=".TodosEventosPolicia">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".TodosEventosPolicia" />
         </activity>
-        <activity android:name=".EventosPolicia"
+        <activity
+            android:name=".EventosPolicia"
             android:label="Menu de eventos"
             android:parentActivityName=".MenuPolicia">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MenuPolicia" />
         </activity>
-        <activity android:name=".AsignadosEventosPolicia"
+        <activity
+            android:name=".AsignadosEventosPolicia"
             android:label="Eventos asignados"
             android:parentActivityName=".EventosPolicia">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".EventosPolicia" />
         </activity>
-        <activity android:name=".MostrarEventoAsignado"
-            android:label="Evento asignado"/>
-        <activity android:name=".AvisoAsistencia"
-            android:label="Aviso Asistencia"/>
-        <activity android:name=".AvisoCreacionPreDenuncia"
-            android:label="Aviso creación predenuncia"/>
+        <activity
+            android:name=".MostrarEventoAsignado"
+            android:label="Evento asignado" />
+        <activity
+            android:name=".AvisoAsistencia"
+            android:label="Aviso Asistencia" />
+        <activity
+            android:name=".AvisoCreacionPreDenuncia"
+            android:label="Aviso creación predenuncia" />
+        <activity android:name=".MostrarAsignarPredenuncia"></activity>
     </application>
 
 </manifest>

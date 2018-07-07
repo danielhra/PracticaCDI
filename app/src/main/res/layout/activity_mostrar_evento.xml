@@ -23,7 +23,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="none"
-                android:editable="false"
+                android:enabled="false"
                 android:hint="nombre"
 
                 android:singleLine="true" />
@@ -38,7 +38,7 @@
                 android:id="@+id/fechaEventoM"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:editable="false"
+                android:enabled="false"
                 android:ems="10"
                 android:inputType="none"
                 android:hint="fecha"
@@ -53,7 +53,7 @@
 
             <EditText
                 android:id="@+id/ubicacionEventoM"
-                android:editable="false"
+                android:enabled="false"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -70,7 +70,7 @@
 
             <EditText
                 android:layout_width="match_parent"
-                android:editable="false"
+                android:enabled="false"
                 android:layout_height="wrap_content"
                 android:id="@+id/descripcionEventoM"
                 android:ems="10"

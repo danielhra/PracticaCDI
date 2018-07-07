@@ -1,15 +1,11 @@
 package com.example.julian.cdi;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class FormularioDenuncia extends BaseActivity {
 
@@ -56,7 +52,7 @@ public class FormularioDenuncia extends BaseActivity {
         EditText placa = findViewById(R.id.placaDenuncia);
         EditText numRef = findViewById(R.id.numRefDenuncia);
 
-        Denuncia denuncia = new Denuncia(preDenuncia.nombre,preDenuncia.dni,preDenuncia.sexo,preDenuncia.fechaNac,preDenuncia.correo,preDenuncia.telefono,preDenuncia.direccion,preDenuncia.descripcion,preDenuncia.tipo,nombreP.getText().toString(),numRef.getText().toString(),placa.getText().toString());
+        Denuncia denuncia = new Denuncia(preDenuncia.nombre, preDenuncia.dni, preDenuncia.sexo, preDenuncia.fechaDenuncia, preDenuncia.correo, preDenuncia.telefono, preDenuncia.direccion, preDenuncia.descripcion, preDenuncia.tipo, nombreP.getText().toString(), numRef.getText().toString(), placa.getText().toString());
 
 
         Datos.getDatos().addDenuncia(denuncia);

@@ -15,7 +15,7 @@ public class MenuJefatura extends BaseActivity {
     }
 
     public void irGestionDenuncias(View view) {
-        startActivity(new Intent(this, GestionDenuncias.class));
+        startActivity(new Intent(this, AsignarPredenuncia.class));
     }
 
     public void irGestionEvento(View view) {

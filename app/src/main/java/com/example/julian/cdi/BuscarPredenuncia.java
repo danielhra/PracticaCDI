@@ -1,11 +1,8 @@
 package com.example.julian.cdi;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -26,7 +23,7 @@ public class BuscarPredenuncia extends BaseActivity {
         lv= (ListView) findViewById(R.id.listviewPredenuncia);
 
         for (int i = 0; i < Datos.getDatos().getDenunciasPendientes().size(); i++) {
-            denunciasPendiente.add("Denuncia: "+ i +"  Fecha: "+Datos.getDatos().getDenunciasPendientes().get(i).fechaNac);
+            denunciasPendiente.add("Denuncia: " + i + "  Fecha: " + Datos.getDatos().getDenunciasPendientes().get(i).fechaDenuncia);
         }
 
 
