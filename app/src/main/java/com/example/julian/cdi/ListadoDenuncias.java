@@ -22,7 +22,7 @@ public class ListadoDenuncias extends BaseActivity {
         setContentView(R.layout.activity_listado_denuncias);
         lv= (ListView) findViewById(R.id.listviewL);
         for (int i = 0; i < Datos.getDatos().getDenuncias().size(); i++) {
-            denuncias.add("Denuncia "+i+"  Fecha:"+Datos.getDatos().getDenuncias().get(i).fechaNac);
+            denuncias.add("Denuncia "+i+"  Fecha:"+Datos.getDatos().getDenuncias().get(i).fecha);
         }
         ArrayAdapter <String>adaptador = new ArrayAdapter <String>(this , android.R.layout.simple_list_item_1 , denuncias);
         lv.setAdapter(adaptador);

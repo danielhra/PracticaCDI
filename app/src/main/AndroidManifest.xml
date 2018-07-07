@@ -122,6 +122,7 @@
         <activity
             android:name=".MostrarDenuncia"
             android:label="Denuncia"
+            android:windowSoftInputMode="stateHidden"
             android:parentActivityName=".ListadoDenuncias">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -176,6 +177,7 @@
         </activity>
         <activity
             android:name=".MostrarEvento"
+            android:windowSoftInputMode="stateHidden"
             android:label="Evento"
             android:parentActivityName=".ListadoEventos">
             <meta-data
@@ -207,6 +209,7 @@
         </activity>
         <activity
             android:name=".MostrarEventoPolicia"
+            android:windowSoftInputMode="stateHidden"
             android:label="Evento"
             android:parentActivityName=".TodosEventosPolicia">
             <meta-data
@@ -231,6 +234,7 @@
         </activity>
         <activity
             android:name=".MostrarEventoAsignado"
+            android:windowSoftInputMode="stateHidden"
             android:label="Evento asignado" />
         <activity
             android:name=".AvisoAsistencia"

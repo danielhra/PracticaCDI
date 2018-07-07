@@ -22,10 +22,8 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="none"
-                android:editable="false"
-                android:hint="nombre"
-
-                android:singleLine="true" />
+                android:enabled="false"
+                android:hint="nombre"/>
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -37,11 +35,10 @@
                 android:id="@+id/fechaEventoMP"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:editable="false"
+                android:enabled="false"
                 android:ems="10"
                 android:inputType="none"
-                android:hint="fecha"
-                android:singleLine="true" />
+                android:hint="fecha"/>
         </android.support.design.widget.TextInputLayout>
 
 
@@ -52,13 +49,12 @@
 
             <EditText
                 android:id="@+id/ubicacionEventoMP"
-                android:editable="false"
+                android:enabled="false"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="none"
-                android:hint="ubicacion"
-                android:singleLine="false"/>
+                android:hint="ubicacion"/>
         </android.support.design.widget.TextInputLayout>
 
 
@@ -69,13 +65,12 @@
 
             <EditText
                 android:layout_width="match_parent"
-                android:editable="false"
+                android:enabled="false"
                 android:layout_height="wrap_content"
                 android:id="@+id/descripcionEventoMP"
                 android:ems="10"
                 android:inputType="textMultiLine"
-                android:hint="descripcion"
-                android:singleLine="true" />
+                android:hint="descripcion"/>
         </android.support.design.widget.TextInputLayout>
 
 

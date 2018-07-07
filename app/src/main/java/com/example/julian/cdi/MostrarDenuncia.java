@@ -10,42 +10,47 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MostrarDenuncia extends BaseActivity {
-    TextView numref;
-    TextView fecha;
-    TextView estado;
-    TextView descripcion;
-    EditText alegaciones;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mostrar_denuncia);
         Intent intent= getIntent();
-        numref= findViewById(R.id.numRefMostrar);
-        fecha= findViewById(R.id.fechaMostrar);
-        estado= findViewById(R.id.estadoMostrar);
-        descripcion= findViewById(R.id.descripcionMostrar);
-        alegaciones= findViewById(R.id.alegacionesMostrar);
-        numref.setText(Datos.getDatos().getDenuncias().get(intent.getIntExtra("posicion",9999)).numRef);
-        fecha.setText(Datos.getDatos().getDenuncias().get(intent.getIntExtra("posicion",9999)).fechaNac);
-        estado.setText("Activo");
-        descripcion.setText(Datos.getDatos().getDenuncias().get(intent.getIntExtra("posicion",9999)).descripcion);
+
+        Denuncia denuncia = Datos.getDatos().getDenuncias().get(intent.getIntExtra("posicion",999));
+
+        EditText tipo= findViewById(R.id.tipoDenunciaM);
+        EditText nombreCivil= findViewById(R.id.nombreDenunciaM);
+        EditText dni= findViewById(R.id.dniDenunciaM);
+        EditText sexo= findViewById(R.id.sexoDenunciaM);
+        EditText fecha= findViewById(R.id.fechaDenunciaM);
+        EditText correo= findViewById(R.id.correoDenunciaM);
+        EditText telefono = findViewById(R.id.telefonoDenunciaM);
+        EditText direccion = findViewById(R.id.direccionDenunciaM);
+        EditText descricion = findViewById(R.id.descripcionDenunciaM);
+        EditText nombrePolicia = findViewById(R.id.nombrePoliciaDenunciaM);
+        EditText placa = findViewById(R.id.placaPoliciaDenunciaM);
+        EditText numref = findViewById(R.id.numRefDenunciaM);
+
+
+
+        tipo.setText(denuncia.tipo);
+        nombreCivil.setText(denuncia.nombreCivil);
+        dni.setText(denuncia.dni);
+        sexo.setText(denuncia.sexo);
+        fecha.setText(denuncia.fecha);
+        correo.setText(denuncia.correo);
+        telefono.setText(denuncia.telefono);
+        direccion.setText(denuncia.direccion);
+        descricion.setText(denuncia.descripcion);
+        nombrePolicia.setText(denuncia.nombreP);
+        placa.setText(denuncia.placa);
+        numref.setText(denuncia.numRef);
+
     }
 
     public void irMenu(View view) {
-        Context context = getApplicationContext();
-        CharSequence text = "MODIFICACIÓN GUARDADA Y ENVIADA";
-        int duration = Toast.LENGTH_SHORT;
-        Toast toast = Toast.makeText(context, text, duration);
-        toast.show();
         startActivity(new Intent(this, MenuCivil.class));
-    }
-    public void onToast_Mensaje(View view){
-        Context context = getApplicationContext();
-        CharSequence text = "MODIFICACIÓN GUARDADA";
-        int duration = Toast.LENGTH_SHORT;
-
-        Toast toast = Toast.makeText(context, text, duration);
-        toast.show();
     }
 }
