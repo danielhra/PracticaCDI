@@ -9,38 +9,46 @@ import android.widget.TextView;
 
 public class FormularioDenuncia extends BaseActivity {
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_formulario_denuncia);
 
-        setContentView(R.layout.activity_formulario_denuncia);
-        setTitle("FORMULARIO DENUNCIA");
-
         Intent i = getIntent();
 
         PreDenuncia preDenuncia = (PreDenuncia)i.getSerializableExtra("preDenuncia");
 
-        TextView nombreCivil = (TextView)findViewById(R.id.nombreCivilDenuncia);
-        TextView dniCivil = (TextView) findViewById(R.id.dniCivilDenuncia);
-        TextView descripcionCivil = (TextView) findViewById(R.id.descripcionCivilDenuncia);
+        EditText tipo= findViewById(R.id.tipoDenuncia);
+        EditText nombreCivil= findViewById(R.id.nombreDenuncia);
+        EditText dni= findViewById(R.id.dniDenuncia);
+        EditText sexo= findViewById(R.id.sexoDenuncia);
+        EditText fecha= findViewById(R.id.fechaDenuncia);
+        EditText correo= findViewById(R.id.correoDenuncia);
+        EditText telefono = findViewById(R.id.telefonoDenuncia);
+        EditText direccion = findViewById(R.id.direccionDenuncia);
+        EditText descricion = findViewById(R.id.descripcionDenuncia);
+
+
+        tipo.setText(preDenuncia.tipo);
         nombreCivil.setText(preDenuncia.nombre);
-        dniCivil.setText(preDenuncia.dni);
-        descripcionCivil.setText(preDenuncia.descripcion);
-
-        ImageButton enviar = findViewById(R.id.enviarDenuncia);
-
-        enviar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                insertarDatos();
-
-                startActivity(new Intent(v.getContext(), MenuPolicia.class));
-            }
-        });
+        dni.setText(preDenuncia.dni);
+        sexo.setText(preDenuncia.sexo);
+        fecha.setText(preDenuncia.fechaDenuncia);
+        correo.setText(preDenuncia.correo);
+        telefono.setText(preDenuncia.telefono);
+        direccion.setText(preDenuncia.direccion);
+        descricion.setText(preDenuncia.descripcion);
 
 
+    }
+
+    public void crearDenuncia(View view) {
+
+        insertarDatos();
+
+        startActivity(new Intent(this, MenuPolicia.class));
     }
 
 
@@ -48,17 +56,15 @@ public class FormularioDenuncia extends BaseActivity {
 
         PreDenuncia preDenuncia = (PreDenuncia)getIntent().getSerializableExtra("preDenuncia");
 
-        EditText nombreP = findViewById(R.id.nombreDenuncia);
-        EditText placa = findViewById(R.id.placaDenuncia);
+        EditText nombreP = findViewById(R.id.nombrePoliciaDenuncia);
+        EditText placa = findViewById(R.id.placaPoliciaDenuncia);
         EditText numRef = findViewById(R.id.numRefDenuncia);
 
         Denuncia denuncia = new Denuncia(preDenuncia.nombre, preDenuncia.dni, preDenuncia.sexo, preDenuncia.fechaDenuncia, preDenuncia.correo, preDenuncia.telefono, preDenuncia.direccion, preDenuncia.descripcion, preDenuncia.tipo, nombreP.getText().toString(), numRef.getText().toString(), placa.getText().toString());
 
 
+        //todo añadir denuncia a otro sitio tambien
         Datos.getDatos().addDenuncia(denuncia);
-
-
-
 
     }
 }

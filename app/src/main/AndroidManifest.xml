@@ -159,7 +159,7 @@
                 android:value=".MenuMultas" />
         </activity>
         <activity
-            android:name=".NuevoEvento"
+            android:name=".FormularioEvento"
             android:label="Nuevo Evento"
             android:parentActivityName=".ListadoEventos">
             <meta-data
@@ -238,7 +238,15 @@
         <activity
             android:name=".AvisoCreacionPreDenuncia"
             android:label="Aviso creación predenuncia" />
-        <activity android:name=".MostrarAsignarPredenuncia"></activity>
+        <activity
+            android:name=".MostrarAsignarPredenuncia"
+            android:label="Asignar Predenuncia"
+            android:parentActivityName=".AsignarPredenuncia"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".AsignarPredenuncia" />
+        </activity>
     </application>
 
 </manifest>

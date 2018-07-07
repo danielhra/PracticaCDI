@@ -31,21 +31,14 @@ public class FormularioPredenuncia extends BaseActivity {
         spinner.setAdapter(adapter);
 
 
-        ImageButton enviar = findViewById(R.id.enviarPredenuncia);
+    }
 
 
-        enviar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+    public void enviarPredenuncia(View view) {
 
-             insertarDatos();
+        insertarDatos();
 
-
-
-             startActivity(new Intent(v.getContext(), MenuCivil.class));
-
-            }
-        });
+        startActivity(new Intent(this, MenuCivil.class));
     }
 
     private void insertarDatos() {
@@ -53,7 +46,7 @@ public class FormularioPredenuncia extends BaseActivity {
         EditText nombre   = (EditText)findViewById(R.id.nombrePredenuncia);
         EditText dni   = (EditText)findViewById(R.id.dniPredenuncia);
         EditText sexo   = (EditText)findViewById(R.id.sexoPredenuncia);
-        EditText fechaNac   = (EditText)findViewById(R.id.fechaNacPredenuncia);
+        EditText fecha   = (EditText)findViewById(R.id.fechaPredenuncia);
         EditText correo   = (EditText)findViewById(R.id.correoPredenuncia);
         EditText telefono   = (EditText)findViewById(R.id.telefonoPredenuncia);
         EditText direccion   = (EditText)findViewById(R.id.direccionPredenuncia);
@@ -61,20 +54,11 @@ public class FormularioPredenuncia extends BaseActivity {
         Spinner spinner = (Spinner)findViewById(R.id.spinnerPredenuncia);
 
 
-        PreDenuncia preDenuncia = new PreDenuncia(nombre.getText().toString(),dni.getText().toString(),sexo.getText().toString(),fechaNac.getText().toString(),correo.getText().toString(),telefono.getText().toString(),direccion.getText().toString(),descripcion.getText().toString(),spinner.getSelectedItem().toString(),Datos.getDatos().getPreDenuncias().size());
+        PreDenuncia preDenuncia = new PreDenuncia(nombre.getText().toString(),dni.getText().toString(),sexo.getText().toString(),fecha.getText().toString(),correo.getText().toString(),telefono.getText().toString(),direccion.getText().toString(),descripcion.getText().toString(),spinner.getSelectedItem().toString(),Datos.getDatos().getPreDenuncias().size());
 
         Datos.getDatos().addPreDenuncia(preDenuncia);
         Datos.getDatos().addDenunciaPend(preDenuncia);
         }
-
-    public void onToast_Mensaje(View view){
-        Context context = getApplicationContext();
-        CharSequence text = "PREDENUNCIA GUARDADA";
-        int duration = Toast.LENGTH_SHORT;
-
-        Toast toast = Toast.makeText(context, text, duration);
-        toast.show();
-    }
 
 
 }

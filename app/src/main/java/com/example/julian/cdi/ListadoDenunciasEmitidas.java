@@ -11,7 +11,7 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class ListadoDenunciasEmitidas extends ListActivity {
+public class ListadoDenunciasEmitidas extends BaseActivity {
 
     ListView lv;
     ArrayList denuncias = new ArrayList();
@@ -27,6 +27,7 @@ public class ListadoDenunciasEmitidas extends ListActivity {
         }
         ArrayAdapter<String> adaptador = new ArrayAdapter <String>(this , android.R.layout.simple_list_item_1 , denuncias);
         lv.setAdapter(adaptador);
+
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

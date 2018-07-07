@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Spinner;
 
-public class NuevoEvento extends BaseActivity {
+public class FormularioEvento extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

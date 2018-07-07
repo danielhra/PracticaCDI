@@ -6,207 +6,159 @@
     android:layout_height="match_parent"
     tools:context=".FormularioPredenuncia">
 
-    <android.support.constraint.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <EditText
-            android:id="@+id/nombrePredenuncia"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:ems="10"
-            android:hint="Nombre"
-            android:inputType="textPersonName"
-            app:layout_constraintBottom_toTopOf="@+id/dniPredenuncia"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.503"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/spinnerPredenuncia" />
-
-        <EditText
-            android:id="@+id/sexoPredenuncia"
-            android:layout_width="wrap_content"
-            android:layout_height="44dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:ems="10"
-            android:hint="Sexo"
-            android:inputType="textPersonName"
-            app:layout_constraintBottom_toTopOf="@+id/fechaNacPredenuncia"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.503"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/dniPredenuncia" />
-
-        <EditText
-            android:id="@+id/fechaNacPredenuncia"
-            android:layout_width="wrap_content"
-            android:layout_height="44dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:ems="10"
-            android:hint="Fecha"
-            android:inputType="textPersonName"
-            app:layout_constraintBottom_toTopOf="@+id/correoPredenuncia"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.503"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/sexoPredenuncia" />
-
-        <EditText
-            android:id="@+id/dniPredenuncia"
-            android:layout_width="wrap_content"
-            android:layout_height="39dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:ems="10"
-            android:hint="DNI"
-            android:inputType="textPersonName"
-            app:layout_constraintBottom_toTopOf="@+id/sexoPredenuncia"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.503"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/nombrePredenuncia" />
-
-        <EditText
-            android:id="@+id/descripcionPredenuncia"
-            android:layout_width="209dp"
-            android:layout_height="70dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:ems="10"
-            android:hint="Descripcion"
-            android:inputType="textMultiLine"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.503"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/direccionPredenuncia" />
-
-        <EditText
-            android:id="@+id/telefonoPredenuncia"
-            android:layout_width="wrap_content"
-            android:layout_height="39dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:ems="10"
-            android:hint="Telefono"
-            android:inputType="textPersonName"
-            app:layout_constraintBottom_toTopOf="@+id/direccionPredenuncia"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.503"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/correoPredenuncia" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <Spinner
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="20dp"
             android:id="@+id/spinnerPredenuncia"
-            android:layout_width="259dp"
-            android:layout_height="39dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="64dp"
-            app:layout_constraintBottom_toTopOf="@+id/nombrePredenuncia"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.504"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <EditText
-            android:id="@+id/correoPredenuncia"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:ems="10"
-            android:hint="Correo"
-            android:inputType="textPersonName"
-            app:layout_constraintBottom_toTopOf="@+id/telefonoPredenuncia"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/fechaNacPredenuncia" />
+            android:layout_marginHorizontal="50dp" />
 
-        <EditText
-            android:id="@+id/direccionPredenuncia"
-            android:layout_width="wrap_content"
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp"
-            android:ems="10"
-            android:hint="Direccion"
-            android:inputType="text"
-            app:layout_constraintBottom_toTopOf="@+id/descripcionPredenuncia"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/telefonoPredenuncia" />
+            android:layout_marginHorizontal="20dp">
 
-        <ImageButton
-            android:id="@+id/enviarPredenuncia"
-            android:layout_width="103dp"
-            android:layout_height="101dp"
-            android:layout_marginBottom="26dp"
-            android:layout_marginEnd="62dp"
-            android:layout_marginLeft="24dp"
-            android:layout_marginRight="62dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="38dp"
-            android:background="?attr/colorBackgroundFloating"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/GuardarPredenuncia"
-            app:layout_constraintTop_toBottomOf="@+id/descripcionPredenuncia"
-            app:srcCompat="@drawable/enviar3" />
+            <EditText
+                android:id="@+id/nombrePredenuncia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="nombre"
+                android:inputType="textPersonName"/>
+        </android.support.design.widget.TextInputLayout>
 
-        <ImageButton
-            android:id="@+id/GuardarPredenuncia"
-            android:layout_width="121dp"
-            android:layout_height="97dp"
-            android:layout_marginBottom="28dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginLeft="29dp"
-            android:layout_marginRight="24dp"
-            android:layout_marginStart="29dp"
-            android:layout_marginTop="40dp"
-            android:background="?attr/colorBackgroundFloating"
-            android:onClick="onToast_Mensaje"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/enviarPredenuncia"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/descripcionPredenuncia"
-            app:srcCompat="@drawable/save" />
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp">
+
+            <EditText
+                android:id="@+id/dniPredenuncia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="dni"
+                android:inputType="text"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp">
+
+            <EditText
+                android:id="@+id/sexoPredenuncia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="sexo"
+                android:inputType="text"/>
+        </android.support.design.widget.TextInputLayout>
 
 
-    </android.support.constraint.ConstraintLayout>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp">
+
+            <EditText
+                android:id="@+id/fechaPredenuncia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="fecha"
+                android:inputType="date"/>
+        </android.support.design.widget.TextInputLayout>
+
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp">
+
+            <EditText
+                android:id="@+id/correoPredenuncia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="correo"
+                android:inputType="textEmailAddress" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp">
+
+            <EditText
+                android:id="@+id/telefonoPredenuncia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="telefono"
+                android:inputType="number" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp">
+
+            <EditText
+                android:id="@+id/direccionPredenuncia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="direccion"
+                android:inputType="textMultiLine"/>
+        </android.support.design.widget.TextInputLayout>
+
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp">
+
+            <EditText
+                android:id="@+id/descripcionPredenuncia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="descripcion"
+                android:inputType="textMultiLine" />
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <ImageButton
+                android:layout_margin="30dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:srcCompat="@drawable/ic_guardar"
+                android:background="@null"/>
+
+            <ImageButton
+                android:layout_margin="30dp"
+                android:onClick="enviarPredenuncia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_enviar"
+                android:background="@null"/>
+        </LinearLayout>
+
+    </LinearLayout>
 
 </ScrollView>

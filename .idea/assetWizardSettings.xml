@@ -64,9 +64,9 @@
                           <map>
                             <entry key="assetSourceType" value="FILE" />
                             <entry key="height" value="80" />
-                            <entry key="outputName" value="ic_emitido" />
+                            <entry key="outputName" value="ic_guardar" />
                             <entry key="overrideSize" value="true" />
-                            <entry key="sourceFile" value="$USER_HOME$/Downloads/drawableCdi/emitido.svg" />
+                            <entry key="sourceFile" value="$USER_HOME$/Downloads/drawableCdi/guardar.svg" />
                             <entry key="width" value="80" />
                           </map>
                         </option>

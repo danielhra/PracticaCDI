@@ -12,7 +12,6 @@ import java.util.ArrayList;
 
 public class ListadoDenunciasRecibidas extends BaseActivity {
 
-    //todo
     ListView lv;
     ArrayList denuncias = new ArrayList();
     @Override
