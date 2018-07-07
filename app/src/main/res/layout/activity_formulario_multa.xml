@@ -1,164 +1,166 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".FormularioMulta">
+
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FormularioMulta">
+    android:orientation="vertical">
 
-    <android.support.constraint.ConstraintLayout
+
+    <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-
-        <EditText
-            android:id="@+id/textView21"
-            android:layout_width="177dp"
-            android:layout_height="wrap_content"
-            android:hint="Fecha y Hora"
-            android:textColor="@android:color/darker_gray"
-            app:layout_constraintBottom_toTopOf="@+id/textView19"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView20" />
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp">
 
         <EditText
-            android:id="@+id/textView20"
-            android:layout_width="177dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="fecha y hora"
+            android:inputType="textPersonName"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
             android:hint="Lugar de infracción"
-            android:textColor="@android:color/darker_gray"
-            app:layout_constraintBottom_toTopOf="@+id/textView21"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView10" />
+            android:inputType="text"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp">
 
         <EditText
-            android:id="@+id/editText8"
-            android:layout_width="345dp"
-            android:layout_height="40dp"
-            android:layout_marginBottom="41dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Descripción"
-            android:inputType="textMultiLine"
-            android:selectAllOnFocus="true"
-            android:singleLine="false"
-            android:textColor="@android:color/darker_gray"
-            app:layout_constraintBottom_toTopOf="@+id/imageButton16"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView23" />
+            android:inputType="textPersonName"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp">
 
         <EditText
-            android:id="@+id/textView15"
-            android:layout_width="177dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:ems="10"
             android:hint="Vehiculo"
-            android:textColor="@android:color/darker_gray"
-            app:layout_constraintBottom_toTopOf="@+id/textView18"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView25" />
+            android:enabled="true"
+            android:inputType="textPersonName"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp">
 
         <EditText
-            android:id="@+id/textView18"
-            android:layout_width="177dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:ems="10"
             android:hint="Perdida de Puntos"
-            android:textColor="@android:color/darker_gray"
-            app:layout_constraintBottom_toTopOf="@+id/textView10"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+            android:enabled="true"
+            android:inputType="textMultiLine"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp">
 
         <EditText
-            android:id="@+id/textView10"
-            android:layout_width="177dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:ems="10"
             android:hint="Expediente"
-            android:textColor="@android:color/darker_gray"
-            app:layout_constraintBottom_toTopOf="@+id/textView20"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView18" />
+            android:enabled="true"
+            android:inputType="textMultiLine"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp">
 
         <EditText
-            android:id="@+id/textView19"
-            android:layout_width="177dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:ems="10"
             android:hint="Importe"
-            android:textColor="@android:color/darker_gray"
-            app:layout_constraintBottom_toTopOf="@+id/textView23"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView21" />
+            android:enabled="true"
+            android:inputType="textMultiLine"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp">
 
         <EditText
-            android:id="@+id/textView23"
-            android:layout_width="177dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:ems="10"
             android:hint="Importe Reducido"
-            android:textColor="@android:color/darker_gray"
-            app:layout_constraintBottom_toTopOf="@+id/editText8"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView19" />
+            android:enabled="true"
+            android:inputType="textMultiLine"/>
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp">
 
         <EditText
-            android:id="@+id/textView25"
-            android:layout_width="177dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="64dp"
+            android:ems="10"
             android:hint="Nombre y Apellidos"
-            android:textColor="@android:color/darker_gray"
-            app:layout_constraintBottom_toTopOf="@+id/textView15"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:enabled="true"
+            android:inputType="textMultiLine"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center">
 
         <ImageButton
-            android:id="@+id/imageButton16"
-            android:layout_width="97dp"
-            android:layout_height="93dp"
-            android:layout_marginBottom="4dp"
-            android:layout_marginEnd="55dp"
-            android:layout_marginLeft="84dp"
-            android:layout_marginRight="55dp"
-            android:layout_marginStart="84dp"
-            android:layout_marginTop="41dp"
-            android:background="?attr/colorBackgroundFloating"
-            android:onClick="onToast_Mensaje"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/imageButton19"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText8"
-            app:srcCompat="@drawable/save" />
+            android:layout_margin="30dp"
+            android:layout_width="wrap_content"
+            android:onClick="Guardar"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_guardar"
+            android:background="@null"/>
 
         <ImageButton
-            android:id="@+id/imageButton19"
-            android:layout_width="89dp"
-            android:layout_height="90dp"
-            android:layout_marginEnd="114dp"
-            android:layout_marginRight="114dp"
-            android:layout_marginTop="48dp"
-            android:background="?attr/colorBackgroundFloating"
-            android:onClick="irFormularioMultas"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageButton16"
-            app:layout_constraintTop_toBottomOf="@+id/editText8"
-            app:srcCompat="@drawable/enviar3" />
+            android:layout_margin="30dp"
+            android:onClick="irMenuPolicia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_enviar"
+            android:background="@null"/>
+    </LinearLayout>
 
-    </android.support.constraint.ConstraintLayout>
-
+</LinearLayout>
 
 </ScrollView>
+

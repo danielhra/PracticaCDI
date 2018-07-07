@@ -37,18 +37,27 @@ public class MostrarEvento extends BaseActivity {
         desc = findViewById(R.id.descripcionEventoM);
         ubic = findViewById(R.id.ubicacionEventoM);
 
-        nombre.setText(Datos.getDatos().getEventos().get(intent.getIntExtra("posicion",99)).nombre);
-        fecha.setText(Datos.getDatos().getEventos().get(intent.getIntExtra("posicion",99)).fecha);
-        desc.setText(Datos.getDatos().getEventos().get(intent.getIntExtra("posicion",99)).descripcion);
-        ubic.setText(Datos.getDatos().getEventos().get(intent.getIntExtra("posicion",99)).ubicacion);
+        nombre.setText(Datos.getDatos().getEventosNoAsig().get(intent.getIntExtra("posicion",99)).nombre);
+        fecha.setText(Datos.getDatos().getEventosNoAsig().get(intent.getIntExtra("posicion",99)).fecha);
+        desc.setText(Datos.getDatos().getEventosNoAsig().get(intent.getIntExtra("posicion",99)).descripcion);
+        ubic.setText(Datos.getDatos().getEventosNoAsig().get(intent.getIntExtra("posicion",99)).ubicacion);
 
 
     }
 
     public void irAvisoNotificacion(View view) {
 
-        Datos.getDatos().getEventosAsig().add(Datos.getDatos().getEventos().get(getIntent().getIntExtra("posicion",99)));
+        // Datos.getDatos().getEventosAsig().add(Datos.getDatos().getEventos().get(getIntent().getIntExtra("posicion",99)));
 
-        startActivity(new Intent(this, AvisoNotificacion.class));
+
+        Evento evento = Datos.getDatos().getEventosNoAsig().get(getIntent().getIntExtra("posicion",99));
+
+        Datos.getDatos().getEventos().add(evento);
+        Datos.getDatos().getEventosNoAsig().remove(evento);
+
+        Intent intent = new Intent(this, AvisoNotificacion.class);
+
+        intent.putExtra("posicion",getIntent().getIntExtra("posicion",99));
+        startActivity(intent);
     }
 }

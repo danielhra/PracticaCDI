@@ -16,6 +16,7 @@ public class AvisoNotificacion extends BaseActivity{
     }
 
     public void irMenuJefatura(View view) {
+
         startActivity(new Intent(this, MenuJefatura.class));
     }
 

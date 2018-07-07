@@ -13,6 +13,44 @@ public class Datos {
     private ArrayList <PreDenuncia> denunciasPendientes;
     private ArrayList <Aviso> avisos;
     private ArrayList <Evento> eventos;
+    private ArrayList <Evento> eventosNoAsig;
+
+    public ArrayList<Usuario> getUsers() {
+        return users;
+    }
+
+    public void setUsers(ArrayList<Usuario> users) {
+        this.users = users;
+    }
+
+    public void setDenuncias(ArrayList<Denuncia> denuncias) {
+        this.denuncias = denuncias;
+    }
+
+    public void setAtestados(ArrayList<Atestado> atestados) {
+        this.atestados = atestados;
+    }
+
+    public void setPreDenuncias(ArrayList<PreDenuncia> preDenuncias) {
+        this.preDenuncias = preDenuncias;
+    }
+
+    public void setDenunciasPendientes(ArrayList<PreDenuncia> denunciasPendientes) {
+        this.denunciasPendientes = denunciasPendientes;
+    }
+
+    public ArrayList<Evento> getEventosNoAsig() {
+        return eventosNoAsig;
+    }
+
+    public void setEventosNoAsig(ArrayList<Evento> eventosNoAsig) {
+        this.eventosNoAsig = eventosNoAsig;
+    }
+
+    public void setEventosAsig(ArrayList<Evento> eventosAsig) {
+        this.eventosAsig = eventosAsig;
+    }
+
     private ArrayList <Evento> eventosAsig;
     private ArrayList <Denuncia> denunciasRecibidas;
 
@@ -75,6 +113,8 @@ public class Datos {
 
         users = new ArrayList<>();
 
+        eventosNoAsig = new ArrayList<>();
+
         denuncias = new ArrayList<>();
 
         Denuncia denuncia1 = new Denuncia("Julian Martin Arias","4554523S","M","16/6/2016","juli@juli.com","67672399723","estados unidos","Fui agredido por una banda de maleantes","daño a propiedad","Daniel","23456F","276FRT");
@@ -93,7 +133,6 @@ public class Datos {
 
         denunciasPendientes = new ArrayList<>();
 
-        denunciasPendientes.add(PD);
 
 
         eventos = new ArrayList<>();
@@ -102,8 +141,8 @@ public class Datos {
         Evento evento1 = new Evento("loolapalooza","27/12/2001","madrid","evento de musica EDM");
         Evento evento2 = new Evento("manifestacion","15/06/2018","barcelona","mejores pagas para los profesores");
 
-        eventos.add(evento1);
-        eventos.add(evento2);
+        eventosNoAsig.add(evento1);
+        eventosNoAsig.add(evento2);
 
         avisos = new ArrayList<>();
 
@@ -144,7 +183,7 @@ public class Datos {
 
     public void addDenunciaPend(PreDenuncia preDenuncia) { denunciasPendientes.add(preDenuncia);}
 
-    public void removeDenuncia(Denuncia denuncia) { denunciasPendientes.remove(denuncia);}
+    public void deleteDenunciaPendiente(PreDenuncia preDenuncia){ denunciasPendientes.remove(preDenuncia);}
 
     public void addEventoAsig(Evento evento) { eventosAsig.add(evento); }
 

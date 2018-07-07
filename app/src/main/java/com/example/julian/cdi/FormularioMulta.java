@@ -15,20 +15,21 @@ public class FormularioMulta extends BaseActivity {
         setContentView(R.layout.activity_formulario_multa);
     }
 
-    public void onToast_Mensaje(View view){
-        Context context = getApplicationContext();
-        CharSequence text = "MULTA GUARDADA";
-        int duration = Toast.LENGTH_SHORT;
 
-        Toast toast = Toast.makeText(context, text, duration);
-        toast.show();
+    public void irMenuPolicia(View view) {
+
+        Intent intent = new Intent(this, AvisoAsistencia.class);
+
+        intent.putExtra("mensaje","SE HA CREADO EL ATESTADO");
+        startActivity(intent);
     }
-    public void irFormularioMultas(View view) {
-        Context context = getApplicationContext();
-        CharSequence text = "MULTA GUARDADA Y ENVIADA";
-        int duration = Toast.LENGTH_SHORT;
-        Toast toast = Toast.makeText(context, text, duration);
-        toast.show();
-        startActivity(new Intent(this, MenuPolicia.class));
+
+    public void Guardar(View view){
+        Intent intent = new Intent(this, AvisoAsistencia.class);
+
+        intent.putExtra("mensaje","SE HA GUARDADO EL ATESTADO");
+        startActivity(intent);
     }
 }
+
+

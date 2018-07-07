@@ -48,7 +48,11 @@ public class FormularioDenuncia extends BaseActivity {
 
         insertarDatos();
 
-        startActivity(new Intent(this, MenuPolicia.class));
+        Datos.getDatos().deleteDenunciaPendiente((PreDenuncia) getIntent().getSerializableExtra("preDenuncia"));
+
+        Intent intent = new Intent(this, AvisoAsistencia.class);
+        intent.putExtra("mensaje","SE HA CREADO LA DENUNCIA");
+        startActivity(intent);
     }
 
 
@@ -64,6 +68,7 @@ public class FormularioDenuncia extends BaseActivity {
 
 
         //todo añadir denuncia a otro sitio tambien
+        Datos.getDatos().deleteDenunciaPendiente(preDenuncia);
         Datos.getDatos().addDenuncia(denuncia);
 
     }

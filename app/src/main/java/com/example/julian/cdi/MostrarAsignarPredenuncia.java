@@ -40,6 +40,8 @@ public class MostrarAsignarPredenuncia extends BaseActivity {
         tipo = findViewById(R.id.tipoPredenunciaM);
 
 
+
+
         nombre.setText(Datos.getDatos().getPreDenuncias().get(intent.getIntExtra("posicion", 99)).nombre);
         dni.setText(Datos.getDatos().getPreDenuncias().get(intent.getIntExtra("posicion", 99)).dni);
         sexo.setText(Datos.getDatos().getPreDenuncias().get(intent.getIntExtra("posicion", 99)).sexo);
@@ -53,6 +55,13 @@ public class MostrarAsignarPredenuncia extends BaseActivity {
     }
 
     public void irAvisoNotificacion(View view) {
+
+        PreDenuncia denunciaPendiente = Datos.getDatos().getPreDenuncias().get(getIntent().getIntExtra("posicion",99));
+        Datos.getDatos().addDenunciaPend(denunciaPendiente);
+
+        Datos.getDatos().getPreDenuncias().remove(denunciaPendiente);
+
+
         startActivity(new Intent(this, AvisoNotificacion.class));
     }
 }

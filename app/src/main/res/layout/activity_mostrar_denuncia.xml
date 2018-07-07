@@ -226,19 +226,21 @@
                 android:layout_margin="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="guardarPredenuncia"
                 app:srcCompat="@drawable/ic_guardar"
                 android:background="@null"/>
 
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="fotoPredenuncia"
                 android:layout_margin="10dp"
                 app:srcCompat="@drawable/ic_anadirfoto"
                 android:background="@null"/>
 
             <ImageButton
                 android:layout_margin="10dp"
-                android:onClick="irMenu"
+                android:onClick="enviarPredenuncia"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/ic_enviar"

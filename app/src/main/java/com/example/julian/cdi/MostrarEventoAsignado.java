@@ -23,10 +23,10 @@ public class MostrarEventoAsignado extends AppCompatActivity {
         desc = findViewById(R.id.descripcionEventoMP);
         ubic = findViewById(R.id.ubicacionEventoMP);
 
-        nombre.setText(Datos.getDatos().getEventos().get(intent.getIntExtra("posicion", 99)).nombre);
-        fecha.setText(Datos.getDatos().getEventos().get(intent.getIntExtra("posicion", 99)).fecha);
-        desc.setText(Datos.getDatos().getEventos().get(intent.getIntExtra("posicion", 99)).descripcion);
-        ubic.setText(Datos.getDatos().getEventos().get(intent.getIntExtra("posicion", 99)).ubicacion);
+        nombre.setText(Datos.getDatos().getEventosAsig().get(intent.getIntExtra("posicion", 99)).nombre);
+        fecha.setText(Datos.getDatos().getEventosAsig().get(intent.getIntExtra("posicion", 99)).fecha);
+        desc.setText(Datos.getDatos().getEventosAsig().get(intent.getIntExtra("posicion", 99)).descripcion);
+        ubic.setText(Datos.getDatos().getEventosAsig().get(intent.getIntExtra("posicion", 99)).ubicacion);
 
 
     }

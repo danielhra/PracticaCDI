@@ -24,24 +24,11 @@ public class ListadoEventos extends BaseActivity {
 
         lv= (ListView) findViewById(R.id.listviewE);
 
-        for (int i = 0; i < Datos.getDatos().getEventos().size(); i++) {
-            eventos.add("Evento:"+ Datos.getDatos().getEventos().get(i).nombre+"  Fecha:"+Datos.getDatos().getEventos().get(i).fecha);        }
+        for (int i = 0; i < Datos.getDatos().getEventosNoAsig().size(); i++) {
+            eventos.add("Evento:"+ Datos.getDatos().getEventosNoAsig().get(i).nombre+"  Fecha:"+Datos.getDatos().getEventosNoAsig().get(i).fecha);        }
 
 
-        ArrayAdapter adaptador = new ArrayAdapter(this, android.R.layout.simple_list_item_2, android.R.id.text1, eventos) {
-
-            @Override
-            public View getView(int position, View convertView, ViewGroup parent) {
-                View view = super.getView(position, convertView, parent);
-                TextView text1 = (TextView) view.findViewById(android.R.id.text1);
-                TextView text2 = (TextView) view.findViewById(android.R.id.text2);
-
-                text2.setText("policia asignado =" + position);
-                return view;
-            }
-        };
-
-
+        ArrayAdapter adaptador = new ArrayAdapter(this, android.R.layout.simple_list_item_1, eventos);
 
 
         lv.setAdapter(adaptador);

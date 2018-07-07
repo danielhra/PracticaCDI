@@ -50,7 +50,33 @@ public class MostrarDenuncia extends BaseActivity {
 
     }
 
-    public void irMenu(View view) {
-        startActivity(new Intent(this, MenuCivil.class));
+    public void enviarPredenuncia(View view) {
+
+        Intent intent= new Intent(this, AvisoCreacionPreDenuncia.class);
+
+        intent.putExtra("mensaje","SE HA MODIFICADO LA DENUNCIA");
+
+        startActivity(intent);
     }
+
+    public void guardarPredenuncia(View view) {
+
+        Intent intent= new Intent(this, AvisoCreacionPreDenuncia.class);
+
+        intent.putExtra("mensaje","SE HA GUARDADO LA DENUNCIA");
+
+        startActivity(intent);
+
+    }
+
+    public void fotoPredenuncia(View view) {
+
+        Intent intent= new Intent(this, AvisoCreacionPreDenuncia.class);
+
+        intent.putExtra("mensaje","SE HA AÑADIDO LA FOTO A LA DENUNCIA");
+
+        startActivity(intent);
+
+    }
+
 }

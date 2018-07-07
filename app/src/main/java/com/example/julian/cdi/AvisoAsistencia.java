@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 public class AvisoAsistencia extends BaseActivity {
 
@@ -11,6 +12,14 @@ public class AvisoAsistencia extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aviso_asistencia);
+
+        if(getIntent().getStringExtra("mensaje") != null){
+
+            TextView aviso = findViewById(R.id.avisoPolicia);
+
+            aviso.setText(getIntent().getStringExtra("mensaje"));
+
+        }
 
 
     }

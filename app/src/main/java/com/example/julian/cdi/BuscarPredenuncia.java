@@ -39,14 +39,12 @@ public class BuscarPredenuncia extends BaseActivity {
                 EditText num = (EditText)findViewById(R.id.idPredenuncia);
                 int id = Integer.parseInt(num.getText().toString());
 
-                for (PreDenuncia preDenuncia:Datos.getDatos().getPreDenuncias()
-                        ) {
+                for (int i=0; i< Datos.getDatos().getDenunciasPendientes().size();i++) {
 
-                    if(preDenuncia.id == id){
-                        Intent i = new Intent(BuscarPredenuncia.this,FormularioDenuncia.class);
-                        i.putExtra("preDenuncia",preDenuncia);
-                        //todo eliminar de pendiente
-                        startActivity(i);
+                    if(i == id){
+                        Intent intent = new Intent(BuscarPredenuncia.this,FormularioDenuncia.class);
+                        intent.putExtra("preDenuncia",Datos.getDatos().getDenunciasPendientes().get(i));
+                        startActivity(intent);
 
                     }
 

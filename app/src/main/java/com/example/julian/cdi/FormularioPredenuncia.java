@@ -38,7 +38,21 @@ public class FormularioPredenuncia extends BaseActivity {
 
         insertarDatos();
 
-        startActivity(new Intent(this, MenuCivil.class));
+        Intent intent= new Intent(this, AvisoCreacionPreDenuncia.class);
+
+        intent.putExtra("mensaje","SE HA REALIZADO LA PREDENUNCIA");
+
+        startActivity(intent);
+    }
+
+    public void guardarPredenuncia(View view) {
+
+        Intent intent= new Intent(this, AvisoCreacionPreDenuncia.class);
+
+        intent.putExtra("mensaje","SE HA GUARDADO LA PREDENUNCIA");
+
+        startActivity(intent);
+
     }
 
     private void insertarDatos() {
