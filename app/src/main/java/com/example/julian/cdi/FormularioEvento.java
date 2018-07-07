@@ -34,7 +34,7 @@ public class FormularioEvento extends BaseActivity {
 
         Evento evento = new Evento(nombre.getText().toString(),fecha.getText().toString(),desc.getText().toString(),ubic.getText().toString());
 
-        Datos.getDatos().addEvento(evento);
+        Datos.getDatos().getEventosNoAsig().add(evento);
     }
 
 }

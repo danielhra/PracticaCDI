@@ -25,8 +25,8 @@ public class TodosEventosPolicia extends BaseActivity {
 
         lv= (ListView) findViewById(R.id.listviewTodosEventos);
 
-        for (int i = 0; i < Datos.getDatos().getEventos().size(); i++) {
-            eventos.add("Evento:"+ Datos.getDatos().getEventos().get(i).nombre+"  Fecha:"+Datos.getDatos().getEventos().get(i).fecha);
+        for (int i = 0; i < Datos.getDatos().getEventosNoAsig().size(); i++) {
+            eventos.add("Evento:"+ Datos.getDatos().getEventosNoAsig().get(i).nombre+"  Fecha:"+Datos.getDatos().getEventosNoAsig().get(i).fecha);
         }
 
 
@@ -41,6 +41,7 @@ public class TodosEventosPolicia extends BaseActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent i = new Intent(TodosEventosPolicia.this, MostrarEvento.class);
                 i.putExtra("posicion",position);
+                i.putExtra("imagenes","false");
                 startActivity(i);
             }
         });

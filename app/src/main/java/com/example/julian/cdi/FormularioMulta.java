@@ -20,14 +20,14 @@ public class FormularioMulta extends BaseActivity {
 
         Intent intent = new Intent(this, AvisoAsistencia.class);
 
-        intent.putExtra("mensaje","SE HA CREADO EL ATESTADO");
+        intent.putExtra("mensaje","SE HA CREADO LA MULTA");
         startActivity(intent);
     }
 
     public void Guardar(View view){
         Intent intent = new Intent(this, AvisoAsistencia.class);
 
-        intent.putExtra("mensaje","SE HA GUARDADO EL ATESTADO");
+        intent.putExtra("mensaje","SE HA GUARDADO LA MULTA");
         startActivity(intent);
     }
 }

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -41,6 +42,16 @@ public class MostrarEvento extends BaseActivity {
         fecha.setText(Datos.getDatos().getEventosNoAsig().get(intent.getIntExtra("posicion",99)).fecha);
         desc.setText(Datos.getDatos().getEventosNoAsig().get(intent.getIntExtra("posicion",99)).descripcion);
         ubic.setText(Datos.getDatos().getEventosNoAsig().get(intent.getIntExtra("posicion",99)).ubicacion);
+
+        if(intent.getStringExtra("imagenes") != null){
+            ImageButton enviar = findViewById(R.id.enviar);
+            TextView enviar1 = findViewById(R.id.enviar1);
+
+            enviar.setVisibility(View.GONE);
+            enviar1.setVisibility(View.GONE);
+            spinner.setVisibility(View.GONE);
+
+        }
 
 
     }

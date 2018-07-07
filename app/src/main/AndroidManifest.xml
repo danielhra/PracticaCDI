@@ -184,7 +184,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MenuMultas" />
         </activity>
-        <activity android:name=".AvisoNotificacion" />
+        <activity android:name=".AvisoNotificacion"
+            android:label="Aviso"/>
         <activity
             android:name=".PriorizadoEmergencia"
             android:label="Priorizacion Emergencia" />

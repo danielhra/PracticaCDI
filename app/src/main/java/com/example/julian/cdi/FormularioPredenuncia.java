@@ -71,7 +71,6 @@ public class FormularioPredenuncia extends BaseActivity {
         PreDenuncia preDenuncia = new PreDenuncia(nombre.getText().toString(),dni.getText().toString(),sexo.getText().toString(),fecha.getText().toString(),correo.getText().toString(),telefono.getText().toString(),direccion.getText().toString(),descripcion.getText().toString(),spinner.getSelectedItem().toString(),Datos.getDatos().getPreDenuncias().size());
 
         Datos.getDatos().addPreDenuncia(preDenuncia);
-        Datos.getDatos().addDenunciaPend(preDenuncia);
         }
 
 

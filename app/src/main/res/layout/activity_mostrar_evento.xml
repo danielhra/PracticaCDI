@@ -84,6 +84,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
+            android:id="@+id/enviar1"
             android:text="asignar agente"
             android:textColor="@color/black"
             android:textSize="18sp"/>
@@ -96,11 +97,12 @@
 
         <ImageButton
             android:onClick="irAvisoNotificacion"
+            android:id="@+id/enviar"
             android:layout_margin="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:src="@drawable/ic_enviar"
+            app:srcCompat="@drawable/ic_enviar"
             android:background="@null"
             />
 
